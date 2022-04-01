@@ -1,20 +1,17 @@
 
 public class Arrays {
 	
-	public static int[] toPower(int size, int power) {
-		//int[] returnValue = new int[size];
+	public static double[] toPower(int size, int power) {
 		
-		//return returnValue;
-		int[] result = new int[size+1];  // use "n+1" otherwise it will throw exception
-	    int i = 0;
-	    while (i <= size) 
-	    {
-	        result[i] = power;
-	        power *= 2;
-	        i++;        // increments "i" otherwise its an infinite loop
-	    }
-	    return result;
+		double[] returnValue = new double[size];
+		
+		for(int index=0; index<size; index++) {
+			returnValue[index] = Math.pow(index, power);
+		}
+		return returnValue;
+	
 	}
+		
 
 	public static void main(String[] args) {
 		
@@ -48,6 +45,14 @@ public class Arrays {
          System.out.println(index2);
          
          System.out.println("^^It returns the index of the largest number in the array.^^");
+         
+         System.out.println("Question 3");
+         
+         double[] values = toPower(4, 2);
+         
+         for(double value:values) {
+        	 System.out.println(value);
+         }
          
 	}
 	
